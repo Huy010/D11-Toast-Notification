@@ -13,7 +13,6 @@ function toast(type, status, text) {
       error: "bx bxs-error-circle",
     };
     toast.classList.add("notification", `notification__${type}`);
-    toast.classList.add(`notification__${type}`);
     main.appendChild(toast);
     
 
