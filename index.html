@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <button class="button button__success">Show Success</button>
+        <button class="button button__warning">Show Warning</button>
+        <button class="button button__error">Show Error</button>
+    </div>
+    <ul class="popup">
+        <li class="notification notification__success">
+            <i class='bx bxs-plane-take-off'></i>
+            This is a success message
+            <span class="close">x</span>
+        </li>
+        <li class="notification notification__warning">
+            <i class='bx bxs-bug-alt' ></i>
+            This is a warning message
+            <span class="close">x</span>
+        </li>
+        <li class="notification notification__error">
+            <i class='bx bxs-error-circle'></i>
+            This is a error message
+            <span class="close">x</span>
+        </li>
+    </ul>
+</body>
+<script src="./app.js"></script>
+</html>

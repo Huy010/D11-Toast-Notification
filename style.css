@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(233, 236, 247);
+}
+
+.main {
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.button {
+    min-width: 180px;
+    height: 45px;
+    background-color: white;
+    box-shadow: 0 1px 10px rgb(224, 224, 224);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 10px rgb(148, 142, 142);
+    cursor: pointer;
+}
+
+.button:active {
+    opacity: 0.8;
+}
+
+.button__success {
+    background-color: green;
+}
+
+.button__warning {
+    background-color: orange;
+}
+
+.button__error {
+    background-color: red;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 1;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    min-width: 350px;
+    margin: 25px 0px;
+    padding: 0 15px;
+    border-left: 5px solid black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    animation: run-in ease 1s, vanish linear 1s 3s forwards;
+}
+
+
+@keyframes run-in {
+    from {
+        right: -200px;
+        opacity: 0;
+    }
+    to{
+        right: 0px;
+        opacity: 0.9;
+    }
+}
+
+@keyframes vanish {
+    to {
+        opacity: 0;
+    }
+}
+
+.notification.notification__success {
+    background-color: rgb(4, 196, 4);
+    border-left: 5px solid rgb(2, 136, 2);
+}
+
+.notification.notification__warning {
+    background-color: orange;
+    border-left: 5px solid rgb(184, 120, 1);
+}
+
+.notification.notification__error {
+    background-color: red;
+    border-left: 5px solid rgb(155, 0, 0);
+}
+
+.notification__success::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: rgb(0, 59, 0);
+    animation: time linear 3s forwards;
+}
+
+.notification__warning::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: rgb(87, 56, 0);
+    animation: time linear 3s forwards;
+}
+
+.notification__error::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: rgb(99, 0, 0);
+    animation: time linear 3s forwards;
+}
+
+
+@keyframes time {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+
+}
+.close:hover {
+    cursor: pointer;
+}
